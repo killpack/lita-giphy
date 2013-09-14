@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Lita::Handlers::Giphy, lita_handler: true do
   it { routes_command("giphy swanson dance").to :giphy }
+  it { routes_command("gif swanson dance").to :giphy }
+  it { routes_command("animate swanson dance").to :giphy }
 
   it "sets the Giphy API key to nil by default" do
     expect(Lita.config.handlers.giphy.api_key).to be_nil
