@@ -31,5 +31,9 @@ Lita: giphy swanson dance
 ```
 
 ```
-Lita: giphy me emo spiderman
+Lita: gif me emo spiderman
+```
+
+```
+Lita: animate me joffrey slap
 ```
