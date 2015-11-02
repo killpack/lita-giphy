@@ -39,6 +39,7 @@ module Lita
         process_response(http.get(
           URL,
           q: query,
+          rating: Lita.config.handlers.giphy.rating,
           api_key: Lita.config.handlers.giphy.api_key
         ), query)
       end
