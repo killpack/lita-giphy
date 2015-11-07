@@ -13,9 +13,6 @@ module Lita
         "giphy QUERY" => "Grabs a gif tagged with QUERY."
       })
 
-      # def self.default_config(config)
-      #   config.api_key = nil
-      # end
 
       def giphy(response)
         return unless validate(response)
