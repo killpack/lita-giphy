@@ -2,15 +2,16 @@ require 'lita'
 module Lita
   module Handlers
     class Giphy < Handler
+
+      config :api_key, required: true
+      config :rating, default: "pg"
+
       URL = "http://api.giphy.com/v1/gifs/search"
 
       route(/(?:giphy|gif|animate)(?:\s+me)?\s+(.+)/i, :giphy, command: true, help: {
         "giphy QUERY" => "Grabs a gif tagged with QUERY."
       })
 
-      def self.default_config(config)
-        config.api_key = nil
-      end
 
       def giphy(response)
         return unless validate(response)
@@ -34,6 +35,7 @@ module Lita
         process_response(http.get(
           URL,
           q: query,
+          rating: Lita.config.handlers.giphy.rating,
           api_key: Lita.config.handlers.giphy.api_key
         ), query)
       end
