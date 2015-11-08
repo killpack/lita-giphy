@@ -4,7 +4,6 @@ module Lita
     class Giphy < Handler
 
       config :api_key, required: true
-      config :limit, default: 10
       config :rating, default: "pg"
 
       URL = "http://api.giphy.com/v1/gifs/search"
