@@ -24,7 +24,7 @@ gem "lita-giphy"
 ``` ruby
 Lita.configure do |config|
   config.handlers.giphy.api_key = "dc6zaTOxFJmzC"
-  config.handlers.giphy.rating
+  config.handlers.giphy.rating = 'g'
 end
 ```
 

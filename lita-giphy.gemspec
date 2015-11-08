@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-giphy"
-  spec.version       = "1.0.2"
+  spec.version       = "1.0.3"
   spec.authors       = ["Jordan Killpack"]
   spec.email         = ["jordan.killpack@gatech.edu"]
   spec.description   = %q{Giphy gif search handler for Lita}
