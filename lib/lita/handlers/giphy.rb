@@ -8,7 +8,7 @@ module Lita
 
       URL = "http://api.giphy.com/v1/gifs/search"
 
-      route(/(?:giphy|gif|animate)(?:\s+me)?\s+(.+)/i, :giphy, command: true, help: {
+      route(/^(?:giphy|gif|animate)(?:\s+me)?\s+(.+)/i, :giphy, command: true, help: {
         "giphy QUERY" => "Grabs a gif tagged with QUERY."
       })
 
